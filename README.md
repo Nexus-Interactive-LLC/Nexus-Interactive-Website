@@ -1,4 +1,5 @@
 # Nexus Interactive — Website
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4ca869eb-2cf2-4437-90f7-c695ebfc5134/deploy-status)](https://app.netlify.com/projects/nexusinteractive/deploys)
 
 Modern agency website for Nexus Interactive. Built with vanilla HTML, CSS, and JavaScript — no frameworks, no build tools. Deployed on Netlify.
 

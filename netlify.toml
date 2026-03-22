@@ -1,0 +1,17 @@
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
+
+[[plugins]]
+  package = "netlify-plugin-checklinks"
+  [plugins.inputs]
+    # Tell the plugin to stop checking these specific URLs
+    exclude = [
+      "https://fonts.gstatic.com",
+      "https://fonts.googleapis.com"
+    ]
+
+[[plugins]]
+  package = "netlify-plugin-subfont"
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
