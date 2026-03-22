@@ -1,96 +1,90 @@
-# Nexus Interactive - Website
+# Nexus Interactive — Website
 
-Modern, professional website for Nexus Interactive web development agency.
+Modern agency website for Nexus Interactive. Built with vanilla HTML, CSS, and JavaScript — no frameworks, no build tools. Deployed on Netlify.
 
-## 📁 File Structure
+---
+
+## File Structure
 
 ```
-nexus-website/
-├── index.html          # Main HTML file
+nexus-interactive-website/
+├── index.html              # Main HTML file
 ├── css/
-│   └── style.css      # All styles
+│   └── styles.css          # All styles + CSS variables
 ├── js/
-│   └── main.js        # JavaScript functionality
-├── assets/            # For images, fonts, etc. (currently empty)
-└── README.md          # This file
+│   └── main.js             # JavaScript (nav, modal, forms, animations)
+├── images/
+│   ├── logo.svg            # Horizontal lockup (nav + footer)
+│   ├── logo-mark.svg       # Square icon (avatar, app icon, favicon source)
+└── README.md               # This file
 ```
 
-## 🚀 Quick Start
+---
 
-### Option 1: Open Locally
-1. Open `index.html` in your web browser
-2. The website will work immediately with all styles and functionality
+## Deployment — Netlify
 
-### Option 2: Deploy to Netlify (Recommended)
-1. Go to [netlify.com](https://netlify.com)
-2. Drag and drop the entire `nexus-website` folder
-3. Your site will be live in seconds with a free subdomain
-4. You can add a custom domain in Netlify settings
+The site is connected to Netlify. Any push to the linked branch automatically triggers a new deploy.
 
-### Option 3: Deploy to Vercel
-1. Go to [vercel.com](https://vercel.com)
-2. Import your project (upload folder or connect to GitHub)
-3. Deploy with one click
-4. Add custom domain in project settings
+### Trigger a Manual Redeploy
+1. Log in to [app.netlify.com](https://app.netlify.com)
+2. Open the **Nexus Interactive** site
+3. Go to **Deploys** → **Trigger deploy** → **Deploy site**
 
-### Option 4: GitHub Pages
-1. Create a new repository on GitHub
-2. Upload all files
-3. Go to Settings > Pages
-4. Select main branch as source
-5. Your site will be live at `username.github.io/repository-name`
+### Update the Live Site
+Edit any file locally, then push to the connected Git branch. Netlify picks it up automatically — no manual upload needed.
 
-### Option 5: Traditional Web Hosting
-1. Get hosting from providers like:
-   - Hostinger
-   - Bluehost
-   - SiteGround
-   - HostGator
-2. Upload files via FTP or hosting control panel
-3. Configure your domain name
+If you're editing files directly without Git, drag and drop the updated project folder onto the Netlify deploy zone under **Deploys**.
 
-## ✏️ Customization
+### Custom Domain
+The domain is managed under **Site Settings → Domain Management**. If you ever need to update DNS records (e.g. for email), do it through your domain registrar — not Netlify — unless you're using Netlify DNS.
 
-### Update Contact Information
-Edit `index.html` and find these lines to update:
+### HTTPS
+Netlify provisions and auto-renews a free Let's Encrypt SSL certificate. No action needed.
+
+---
+
+## Before Going Live — Required Setup
+
+### 1. Connect the Audit Request Form
+
+All "Request a Free Audit", "Start a Project", and "Let's Talk" buttons open a modal form. Submissions go to Formspree.
+
+1. Create a free account at [formspree.io](https://formspree.io)
+2. Create a new form and set the destination to `ali.a@nexusint.dev`
+3. Copy the form ID (format: `xyzabcde`)
+4. In `index.html`, replace `YOUR_FORM_ID` in the audit form action:
 
 ```html
-<!-- Email -->
-<a href="mailto:hello@nexusinteractive.com">hello@nexusinteractive.com</a>
-
-<!-- Phone -->
-<a href="tel:+1234567890">+1 (234) 567-890</a>
+<form id="auditForm" action="https://formspree.io/f/YOUR_FORM_ID" ...>
 ```
 
-### Change Colors
-Edit `css/style.css` at the top where CSS variables are defined:
+### 2. Connect the Newsletter Subscribe Forms
 
-```css
-:root {
-    --primary: #0066FF;        /* Main brand color */
-    --primary-dark: #0052CC;   /* Darker shade */
-    --accent: #00E5FF;         /* Accent color */
-    /* ... */
-}
-```
-
-### Add Your Logo
-1. Place your logo file in the `assets/` folder
-2. In `index.html`, replace the text logo:
+There are two subscribe forms — one in the Insights section and one in the strip above the CTA. Recommended: use a separate Formspree form for subscribers so audit leads and newsletter signups stay in different lists.
 
 ```html
-<!-- Replace this: -->
-<div class="logo">Nexus Interactive</div>
+<!-- Insights section -->
+<form id="insightsSubscribeForm" action="https://formspree.io/f/YOUR_FORM_ID" ...>
 
-<!-- With this: -->
-<img src="assets/logo.png" alt="Nexus Interactive" class="logo">
+<!-- Subscribe strip -->
+<form id="stripSubscribeForm" action="https://formspree.io/f/YOUR_FORM_ID" ...>
 ```
 
-### Add Analytics
-Before the closing `</body>` tag in `index.html`, add:
+### 3. Add a Favicon
+
+Convert `assets/logo-mark.svg` to PNG at [realfavicongenerator.net](https://realfavicongenerator.net), drop the output files into `assets/`, then add to the `<head>` in `index.html`:
 
 ```html
-<!-- Google Analytics -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+```
+
+### 4. Add Google Analytics
+
+Before the closing `</body>` tag in `index.html`:
+
+```html
 <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -100,33 +94,118 @@ Before the closing `</body>` tag in `index.html`, add:
 </script>
 ```
 
-## 📱 Features
+---
 
-- ✅ Fully responsive (mobile, tablet, desktop)
-- ✅ Modern animations and transitions
-- ✅ Smooth scrolling navigation
-- ✅ SEO optimized with meta tags
-- ✅ Fast loading and performance optimized
-- ✅ Cross-browser compatible
-- ✅ Accessibility features included
-- ✅ Clean, maintainable code structure
+## Customization
 
-## 🎨 Services Included
+### Colors
 
-1. Web Design
-2. Web Development
-3. Mobile App Development
-4. Performance Optimization
-5. SEO & Analytics
-6. Maintenance & Support
-7. E-commerce Solutions
-8. UI/UX Design
-9. Custom Dashboards
+All colors are CSS variables at the top of `css/styles.css`:
 
-## 📧 Support
+```css
+:root {
+    --primary: #0055FF;        /* Main blue — buttons, highlights */
+    --primary-light: #3378FF;  /* Hover state */
+    --accent: #00D4FF;         /* Cyan — logo dot, em text, node glow */
+    --dark: #080C1A;           /* Section backgrounds */
+    --darker: #040710;         /* Page background */
+}
+```
 
-For questions or customization help, contact: hello@nexusinteractive.com
+The logo uses hardcoded hex values. If you change `--primary` or `--accent`, also update the inline SVG in `index.html` (nav and footer logos) and the files in `assets/`.
 
-## 📄 License
+### Logo
 
-© 2024 Nexus Interactive. All rights reserved.
+The logo is an inline SVG embedded in the nav and footer. The standalone files in `assets/` are for external use — social profiles, email signatures, print materials, etc.
+
+To use an image file instead of inline SVG:
+
+```html
+<!-- Replace the <svg>...</svg> block in the nav with: -->
+<img src="assets/logo.svg" alt="Nexus Interactive" height="34" class="logo">
+```
+
+### Case Studies
+
+Edit the `.case-card` blocks in the `#work` section of `index.html`:
+
+```html
+<article class="case-card">
+    <div class="case-meta">
+        <span class="case-tag">Category · Type</span>
+        <span class="case-year">2025</span>
+    </div>
+    <h3>Client Name</h3>
+    <p class="case-problem"><strong>The Problem:</strong> ...</p>
+    <p class="case-solution"><strong>The Solution:</strong> ...</p>
+    <div class="case-stack">
+        <span>Tech</span><span>Stack</span><span>Tags</span>
+    </div>
+</article>
+```
+
+The first card (`.case-featured`) spans the full width and includes a `.case-impact` block with three metrics. Use it for your strongest project.
+
+### Blog / Insights Articles
+
+The three `.insight-card` elements in `#insights` currently show "Coming soon →". When an article is ready, swap the placeholder for a real link:
+
+```html
+<!-- Before -->
+<span class="insight-cta">Coming soon →</span>
+
+<!-- After -->
+<a href="https://your-blog-url.com/slug" class="insight-cta" target="_blank" rel="noopener">Read article →</a>
+```
+
+### Contact Details
+
+```html
+<!-- CTA section -->
+<a href="tel:+16122088187">Or call +1 (612) 208-8187</a>
+
+<!-- Footer -->
+<a href="mailto:ali.a@nexusint.dev">ali.a@nexusint.dev</a>
+<a href="tel:+16122088187">+1 (612) 208-8187</a>
+```
+
+---
+
+## Features
+
+- Fully responsive — mobile, tablet, desktop
+- SVG logo mark — scales perfectly at all sizes, no raster assets needed
+- Audit request modal — multi-field form with validation, budget selector, loading state, success screen
+- Newsletter subscribe — two forms (insights section + pre-CTA strip), both with inline validation
+- Spam protection — honeypot field on all Formspree forms
+- Scroll reveal animations — elements fade in on viewport entry
+- Active nav link highlighting — updates on scroll
+- Mobile hamburger menu — full-screen overlay
+- Reduced motion support — all animations disabled when user prefers it
+- Tech stack marquee — scrolling ticker of technologies
+- Case studies with problem / solution / impact structure
+- Niche landing sections — community orgs, e-commerce, startups
+- Referral & partnerships section
+- Insights / blog teaser with subscribe form
+- SEO meta tags — description, keywords
+
+---
+
+## Brand Colors
+
+| Token | Hex | Usage |
+|---|---|---|
+| Primary | `#0055FF` | Buttons, active states, borders |
+| Primary Light | `#3378FF` | Hover states |
+| Accent | `#00D4FF` | Logo dot, `em` text, center node glow |
+| Text | `#EDF0FA` | Primary text, N strokes in logo |
+| Background | `#040710` | Page background |
+| Surface | `rgba(255,255,255,0.04)` | Cards and panels |
+
+---
+
+## Contact
+
+ali.a@nexusint.dev · +1 (612) 208-8187
+
+© 2026 Nexus Interactive LLC. All rights reserved.
