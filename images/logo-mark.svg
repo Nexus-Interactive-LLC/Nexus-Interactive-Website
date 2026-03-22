@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <radialGradient id="bg" cx="38%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#0D1B3E"/>
+      <stop offset="100%" stop-color="#060A17"/>
+    </radialGradient>
+    <radialGradient id="node-pulse" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="top-glow" cx="50%" cy="0%" r="60%">
+      <stop offset="0%" stop-color="#1E3A6E" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#1E3A6E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Container background -->
+  <rect width="80" height="80" rx="18" fill="url(#bg)"/>
+
+  <!-- Top inner highlight -->
+  <rect width="80" height="80" rx="18" fill="url(#top-glow)"/>
+
+  <!-- Outer border -->
+  <rect width="80" height="80" rx="18" fill="none" stroke="#1E3060" stroke-width="1.5"/>
+
+  <!-- Inner subtle shine line at top -->
+  <path d="M18 1 Q40 0.5 62 1" stroke="#2E4880" stroke-width="1" fill="none" opacity="0.9"/>
+
+  <!-- N mark — left vertical -->
+  <line x1="22" y1="20" x2="22" y2="60" stroke="#EDF0FA" stroke-width="5.5" stroke-linecap="round"/>
+  <!-- N mark — right vertical -->
+  <line x1="58" y1="20" x2="58" y2="60" stroke="#EDF0FA" stroke-width="5.5" stroke-linecap="round"/>
+  <!-- N mark — diagonal -->
+  <line x1="22" y1="20" x2="58" y2="60" stroke="#EDF0FA" stroke-width="5.5" stroke-linecap="round"/>
+
+  <!-- Center node — outer glow -->
+  <circle cx="40" cy="40" r="12" fill="url(#node-pulse)"/>
+
+  <!-- Center node — mid ring -->
+  <circle cx="40" cy="40" r="7" fill="#00D4FF" opacity="0.18"/>
+
+  <!-- Center node — solid -->
+  <circle cx="40" cy="40" r="4.5" fill="#00D4FF"/>
+
+  <!-- Top-left accent node -->
+  <circle cx="22" cy="20" r="4" fill="#0055FF"/>
+  <circle cx="22" cy="20" r="2.5" fill="#3A78FF"/>
+
+  <!-- Top-right accent node -->
+  <circle cx="58" cy="20" r="4" fill="#0055FF"/>
+  <circle cx="58" cy="20" r="2.5" fill="#3A78FF"/>
+
+  <!-- Bottom nodes — subtle -->
+  <circle cx="22" cy="60" r="2.5" fill="#1A3D8A" opacity="0.8"/>
+  <circle cx="58" cy="60" r="2.5" fill="#1A3D8A" opacity="0.8"/>
+</svg>

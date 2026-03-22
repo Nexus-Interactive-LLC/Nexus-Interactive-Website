@@ -3,197 +3,559 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nexus Interactive - Modern web and mobile app development agency. We create high-performance websites, mobile apps, and digital solutions for growing businesses.">
-    <meta name="keywords" content="web development, mobile app development, UI/UX design, e-commerce, custom dashboards">
-    <title>Nexus Interactive - Modern Web Development Agency</title>
-    
-    <!-- Fonts -->
+    <meta name="description" content="Nexus Interactive — Web & mobile development for community organizations, non-profits, and growing businesses in Minneapolis–St. Paul and beyond.">
+    <meta name="keywords" content="web development Minneapolis, mobile app development non-profit, community org websites, custom dashboards, React Native iOS, Django backend">
+    <title>Nexus Interactive — Modern Web & Mobile Development</title>
+    <link rel="icon" href="/images/logo-mark.svg" type="image/svg+xml">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="bg-grid"></div>
-    <div class="bg-gradient bg-gradient-1"></div>
-    <div class="bg-gradient bg-gradient-2"></div>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">Nexus Interactive</div>
-        <ul class="nav-links">
-            <li><a href="#services">Services</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
-        <a href="#contact" class="cta-button">Start a Project</a>
-    </nav>
+<div class="bg-noise"></div>
+<div class="bg-orb orb-1"></div>
+<div class="bg-orb orb-2"></div>
+<div class="bg-orb orb-3"></div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Build Digital Experiences That <span class="gradient-text">Convert</span></h1>
-            <p>We create modern, high-performance websites and mobile applications that help businesses grow. From concept to launch, we handle everything.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="cta-button">Get Started</a>
-                <a href="#services" class="secondary-button">View Our Work</a>
-            </div>
-        </div>
-    </section>
+<!-- ===================== NAV ===================== -->
+<nav id="navbar">
+    <a href="#" class="logo">Nexus<span>.</span></a>
+    <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#who-we-serve">Who We Serve</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#insights">Insights</a></li>
+    </ul>
+    <div class="nav-right">
+        <a href="#" onclick="openAuditModal(event)" class="cta-button">Start a Project</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
 
-    <!-- Stats -->
-    <section class="stats">
-        <div class="stat-card">
-            <div class="stat-number">150+</div>
-            <div class="stat-label">Projects Delivered</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">98%</div>
-            <div class="stat-label">Client Satisfaction</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">24/7</div>
-            <div class="stat-label">Support Available</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">5+</div>
-            <div class="stat-label">Years Experience</div>
-        </div>
-    </section>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <ul>
+        <li><a href="#work" class="mobile-link">Work</a></li>
+        <li><a href="#who-we-serve" class="mobile-link">Who We Serve</a></li>
+        <li><a href="#services" class="mobile-link">Services</a></li>
+        <li><a href="#process" class="mobile-link">Process</a></li>
+        <li><a href="#insights" class="mobile-link">Insights</a></li>
+        <li><a href="#" onclick="openAuditModal(event)" class="mobile-link cta-button">Start a Project</a></li>
+    </ul>
+</div>
 
-    <!-- Services -->
-    <section id="services" class="services">
-        <div class="section-header">
-            <div class="section-tag">WHAT WE DO</div>
-            <h2>Our Services</h2>
-            <p>Full-stack web and mobile development solutions tailored to your business needs</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <span class="service-icon">🎨</span>
-                <h3>Web Design</h3>
-                <p>Beautiful, user-friendly designs that capture your brand and convert visitors into customers.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">💻</span>
-                <h3>Web Development</h3>
-                <p>Custom-coded websites built with modern technologies for speed, security, and scalability.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">📱</span>
-                <h3>Mobile App Development</h3>
-                <p>Native iOS and Android apps that deliver exceptional user experiences and drive engagement.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">⚡</span>
-                <h3>Performance Optimization</h3>
-                <p>Lightning-fast load times and smooth interactions that keep users engaged.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">🔍</span>
-                <h3>SEO & Analytics</h3>
-                <p>Get found on Google and track your success with integrated analytics and optimization.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">🛠️</span>
-                <h3>Maintenance & Support</h3>
-                <p>Ongoing support to keep your website secure, updated, and running smoothly.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">🛒</span>
-                <h3>E-commerce Solutions</h3>
-                <p>Complete online stores with secure payments, inventory management, and order tracking.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">🎯</span>
-                <h3>UI/UX Design</h3>
-                <p>User-centered design that looks beautiful and makes it easy for customers to take action.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">📊</span>
-                <h3>Custom Dashboards</h3>
-                <p>Build powerful admin panels and analytics dashboards to manage your business data.</p>
-            </div>
-        </div>
-    </section>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+    <div class="hero-eyebrow">
+        <span class="dot"></span>
+        <span>Minneapolis · St. Paul · Remote</span>
+    </div>
+    <h1 class="hero-title">
+        We build digital<br>
+        <em>infrastructure</em> for<br>
+        <span class="gradient-text">communities that matter.</span>
+    </h1>
+    <p class="hero-sub">Full-stack web and mobile development for community organizations, non-profits, and ambitious businesses. From concept to production — we handle the tech so you can focus on impact.</p>
+    <div class="hero-actions">
+        <a href="#" onclick="openAuditModal(event)" class="cta-button">Get a Free Audit</a>
+        <a href="#work" class="ghost-button">See Our Work <span class="arrow">↓</span></a>
+    </div>
+    <div class="hero-badges">
+        <div class="badge"><span class="badge-num">150+</span> Projects</div>
+        <div class="badge-divider"></div>
+        <div class="badge"><span class="badge-num">98%</span> Satisfaction</div>
+        <div class="badge-divider"></div>
+        <div class="badge"><span class="badge-num">5+</span> Years</div>
+        <div class="badge-divider"></div>
+        <div class="badge"><span class="badge-num">24/7</span> Support</div>
+    </div>
+</section>
 
-    <!-- Process -->
-    <section id="process" class="process">
-        <div class="section-header">
-            <div class="section-tag">HOW WE WORK</div>
-            <h2>Our Simple Process</h2>
-            <p>From first conversation to final launch, we make it easy</p>
-        </div>
-        <div class="process-steps">
-            <div class="step">
-                <div class="step-number">01</div>
-                <div class="step-content">
-                    <h3>Discovery Call</h3>
-                    <p>We start with a conversation to understand your business, goals, and vision. No technical jargon—just a friendly chat about what you need.</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-number">02</div>
-                <div class="step-content">
-                    <h3>Design & Planning</h3>
-                    <p>We create mockups and a project plan for your review. You'll see exactly what your website will look like before we write any code.</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-number">03</div>
-                <div class="step-content">
-                    <h3>Development</h3>
-                    <p>Our team builds your website using the latest technologies, keeping you updated with regular progress reports.</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-number">04</div>
-                <div class="step-content">
-                    <h3>Launch & Support</h3>
-                    <p>We launch your site and provide training so you can manage it yourself. Plus, we're always here if you need help.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ===================== MARQUEE ===================== -->
+<div class="marquee-wrap">
+    <div class="marquee-track">
+        <span>React Native</span><span class="bull">·</span>
+        <span>Django</span><span class="bull">·</span>
+        <span>iOS / Swift</span><span class="bull">·</span>
+        <span>Next.js</span><span class="bull">·</span>
+        <span>PostgreSQL</span><span class="bull">·</span>
+        <span>AWS</span><span class="bull">·</span>
+        <span>Figma → Code</span><span class="bull">·</span>
+        <span>E-commerce</span><span class="bull">·</span>
+        <span>REST APIs</span><span class="bull">·</span>
+        <span>Custom Dashboards</span><span class="bull">·</span>
+        <span>React Native</span><span class="bull">·</span>
+        <span>Django</span><span class="bull">·</span>
+        <span>iOS / Swift</span><span class="bull">·</span>
+        <span>Next.js</span><span class="bull">·</span>
+        <span>PostgreSQL</span><span class="bull">·</span>
+        <span>AWS</span><span class="bull">·</span>
+        <span>Figma → Code</span><span class="bull">·</span>
+        <span>E-commerce</span><span class="bull">·</span>
+        <span>REST APIs</span><span class="bull">·</span>
+        <span>Custom Dashboards</span><span class="bull">·</span>
+    </div>
+</div>
 
-    <!-- CTA Section -->
-    <section id="contact" class="cta-section">
-        <div class="cta-box">
-            <h2>Ready to Start Your Project?</h2>
-            <p>Let's build something amazing together. Get in touch for a free consultation and quote.</p>
-            <a href="mailto:ali.a@nexusint.dev" class="cta-button" style="display: inline-block; font-size: 1.1rem; padding: 1rem 2.5rem;">Contact Us Today</a>
-        </div>
-    </section>
+<!-- ===================== FEATURED WORK ===================== -->
+<section id="work" class="section case-studies">
+    <div class="section-header">
+        <div class="section-tag">FEATURED WORK</div>
+        <h2>Real projects. <em>Real impact.</em></h2>
+        <p>We don't just build websites — we solve operational problems with technology.</p>
+    </div>
 
-    <!-- Footer -->
-    <footer id="about">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Nexus Interactive</h4>
-                <p>Modern web and mobile app development for growing businesses.</p>
+    <div class="cases-grid">
+
+        <!-- Case 1 -->
+        <article class="case-card case-featured">
+            <div class="case-meta">
+                <span class="case-tag">Community · Mobile App</span>
+                <span class="case-year">2025</span>
             </div>
-            <div class="footer-section">
+            <h3>Tawfiq Islamic Center</h3>
+            <p class="case-problem"><strong>The Problem:</strong> Prayer times were posted manually on social media. Members couldn't find Qibla direction or access duas without multiple apps. Event updates were scattered.</p>
+            <p class="case-solution"><strong>The Solution:</strong> A native iOS companion app with live prayer times synced to a Django admin portal, Qibla compass, Quran reader, duas library, and tasbeeh counter. One unified experience.</p>
+            <div class="case-impact">
+                <div class="impact-item"><span class="impact-num">1</span><span class="impact-label">App for everything</span></div>
+                <div class="impact-item"><span class="impact-num">Live</span><span class="impact-label">Prayer time sync</span></div>
+                <div class="impact-item"><span class="impact-num">SwiftUI</span><span class="impact-label">+ Django backend</span></div>
+            </div>
+            <div class="case-stack">
+                <span>SwiftUI</span><span>Django</span><span>PostgreSQL</span><span>REST API</span>
+            </div>
+        </article>
+
+        <!-- Case 2 -->
+        <article class="case-card">
+            <div class="case-meta">
+                <span class="case-tag">Non-Profit · Website</span>
+                <span class="case-year">2024</span>
+            </div>
+            <h3>Masjid Ar-Rahim</h3>
+            <p class="case-problem"><strong>The Problem:</strong> An outdated website with no mobile support was losing visitors. Donation flow was broken. The community had no central digital home.</p>
+            <p class="case-solution"><strong>The Solution:</strong> Full redesign with a deep green + gold brand identity, fully responsive layout, integrated donation links, event calendar, and an easy-to-update CMS structure.</p>
+            <div class="case-stack">
+                <span>HTML/CSS/JS</span><span>Responsive</span><span>CMS-ready</span>
+            </div>
+        </article>
+
+        <!-- Case 3 -->
+        <article class="case-card">
+            <div class="case-meta">
+                <span class="case-tag">Tech · Data Dashboard</span>
+                <span class="case-year">2024</span>
+            </div>
+            <h3>Acoustic Engine Dashboard</h3>
+            <p class="case-problem"><strong>The Problem:</strong> Automotive enthusiasts had no way to simulate how modifications would affect their vehicle's sound and performance before purchasing parts.</p>
+            <p class="case-solution"><strong>The Solution:</strong> A full-stack Django + React app with an audio processing pipeline. Users select a vehicle and mods; the engine simulates acoustic output using real part data.</p>
+            <div class="case-stack">
+                <span>Django</span><span>React</span><span>NumPy</span><span>SciPy</span><span>Librosa</span>
+            </div>
+        </article>
+
+    </div>
+
+    <div class="cases-cta">
+        <p>Have a project like these? <a href="#" onclick="openAuditModal(event)">Let's talk →</a></p>
+    </div>
+</section>
+
+<!-- ===================== WHO WE SERVE ===================== -->
+<section id="who-we-serve" class="section who-we-serve">
+    <div class="section-header">
+        <div class="section-tag">WHO WE BUILD FOR</div>
+        <h2>Specialists, not <em>generalists.</em></h2>
+        <p>We focus on three niches where we can deliver the most value — and where most agencies fall short.</p>
+    </div>
+
+    <div class="niches-grid">
+        <div class="niche-card niche-featured">
+            <div class="niche-icon">🕌</div>
+            <h3>Community &amp; Religious Organizations</h3>
+            <p>Mosques, churches, cultural centers, and nonprofits often run on spreadsheets and Facebook posts. We build custom apps and sites that centralize operations — member portals, event management, donation flows, and mobile apps your community will actually use.</p>
+            <ul class="niche-list">
+                <li>Digital Audit (free) — we find the gaps</li>
+                <li>Custom mobile apps with admin portals</li>
+                <li>Donation & events integration</li>
+                <li>Nonprofit pricing available</li>
+            </ul>
+            <a href="#" onclick="openAuditModal(event)" class="niche-cta">Request a Free Audit →</a>
+        </div>
+
+        <div class="niche-card">
+            <div class="niche-icon">🛒</div>
+            <h3>E-commerce &amp; Small Business</h3>
+            <p>Whether you're launching your first store or scaling past six figures, we build fast, conversion-focused e-commerce experiences. Secure payments, inventory management, and dashboards that give you control.</p>
+            <ul class="niche-list">
+                <li>Custom storefronts (no template bloat)</li>
+                <li>Integrated analytics dashboards</li>
+                <li>Performance-first builds</li>
+            </ul>
+            <a href="#" onclick="openAuditModal(event)" class="niche-cta">Start a Conversation →</a>
+        </div>
+
+        <div class="niche-card">
+            <div class="niche-icon">🚀</div>
+            <h3>Startups &amp; Technical Founders</h3>
+            <p>You need a technical partner, not a vendor. We embed in early-stage teams to build MVPs, internal tools, and data-heavy applications — fast and without cutting corners on architecture.</p>
+            <ul class="niche-list">
+                <li>MVP development (weeks, not months)</li>
+                <li>Full-stack: React, Django, AWS</li>
+                <li>Kafka, data pipelines, custom dashboards</li>
+            </ul>
+            <a href="#" onclick="openAuditModal(event)" class="niche-cta">Explore a Partnership →</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services" class="section services">
+    <div class="section-header">
+        <div class="section-tag">WHAT WE DO</div>
+        <h2>Our Services</h2>
+        <p>Full-stack capabilities across web, mobile, and backend systems</p>
+    </div>
+    <div class="services-grid">
+        <div class="service-card">
+            <span class="service-icon">📱</span>
+            <h3>Mobile App Development</h3>
+            <p>Native iOS (SwiftUI) and cross-platform React Native apps with polished UX and production-grade backends.</p>
+        </div>
+        <div class="service-card">
+            <span class="service-icon">💻</span>
+            <h3>Web Development</h3>
+            <p>Custom-coded sites and web apps with modern frameworks — Next.js, React, Django — built for speed and scale.</p>
+        </div>
+        <div class="service-card">
+            <span class="service-icon">📊</span>
+            <h3>Custom Dashboards</h3>
+            <p>Admin panels, analytics dashboards, and internal tools that give you real-time control over your data.</p>
+        </div>
+        <div class="service-card">
+            <span class="service-icon">🎨</span>
+            <h3>UI/UX Design</h3>
+            <p>Figma-to-code workflows. We design and build simultaneously — no handoff waste, faster iterations.</p>
+        </div>
+        <div class="service-card">
+            <span class="service-icon">🛒</span>
+            <h3>E-commerce Solutions</h3>
+            <p>Complete online stores with secure payments, inventory, and order management built to convert.</p>
+        </div>
+        <div class="service-card">
+            <span class="service-icon">⚡</span>
+            <h3>Performance Optimization</h3>
+            <p>Lighthouse scores, Core Web Vitals, and real-world speed improvements for existing sites.</p>
+        </div>
+        <div class="service-card">
+            <span class="service-icon">🔍</span>
+            <h3>SEO &amp; Analytics</h3>
+            <p>Technical SEO, meta strategy, and Google Analytics / GA4 setup that surfaces what actually matters.</p>
+        </div>
+        <div class="service-card">
+            <span class="service-icon">🛠️</span>
+            <h3>Maintenance &amp; Support</h3>
+            <p>Monthly retainers for updates, security patches, hosting management, and on-call support.</p>
+        </div>
+        <div class="service-card">
+            <span class="service-icon">🔗</span>
+            <h3>API &amp; Backend Systems</h3>
+            <p>REST APIs, database architecture, third-party integrations, and cloud infrastructure on AWS.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== PROCESS ===================== -->
+<section id="process" class="section process">
+    <div class="section-header">
+        <div class="section-tag">HOW WE WORK</div>
+        <h2>Transparent from<br><em>day one.</em></h2>
+        <p>No surprises. No scope creep. Just clear milestones and consistent communication.</p>
+    </div>
+    <div class="process-steps">
+        <div class="step">
+            <div class="step-number">01</div>
+            <div class="step-content">
+                <h3>Free Digital Audit</h3>
+                <p>We start by reviewing your current digital presence — website, tools, workflows. We'll identify what's holding you back and present a clear opportunity map. No obligation, no pitch deck.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-number">02</div>
+            <div class="step-content">
+                <h3>Design &amp; Planning</h3>
+                <p>Figma mockups and a detailed project plan before a single line of code. You approve the design direction, timeline, and budget — then we build with confidence.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-number">03</div>
+            <div class="step-content">
+                <h3>Development</h3>
+                <p>Weekly progress updates, staging previews, and a shared project board. You always know where we are and what's coming next.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-number">04</div>
+            <div class="step-content">
+                <h3>Launch &amp; Long-term Support</h3>
+                <p>We handle deployment, domain setup, and staff training. After launch, monthly check-ins and a maintenance retainer keep everything running smoothly as your needs evolve.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== INSIGHTS ===================== -->
+<section id="insights" class="section insights">
+    <div class="section-header">
+        <div class="section-tag">TECHNICAL INSIGHTS</div>
+        <h2>We write about<br><em>what we build.</em></h2>
+        <p>Real technical articles from production projects — not generic how-to guides.</p>
+    </div>
+    <div class="insights-grid">
+        <article class="insight-card insight-featured">
+            <div class="insight-tag">Architecture</div>
+            <h3>Building a Live Prayer Time Sync with Django &amp; iOS</h3>
+            <p>How we structured a REST API that serves accurate, location-aware Azan times to a SwiftUI app — and the lessons learned about timezone edge cases in production.</p>
+            <span class="insight-cta">Coming soon →</span>
+        </article>
+        <article class="insight-card">
+            <div class="insight-tag">Performance</div>
+            <h3>Deploying Full-Stack Apps on AWS: Our 2025 Checklist</h3>
+            <p>Nginx, Gunicorn, RDS, and S3 — the exact setup we use for client projects and why.</p>
+            <span class="insight-cta">Coming soon →</span>
+        </article>
+        <article class="insight-card">
+            <div class="insight-tag">UX</div>
+            <h3>Why Non-Profits Need Custom Apps, Not Templates</h3>
+            <p>A case for purpose-built digital tools in community organizations — with real numbers from our projects.</p>
+            <span class="insight-cta">Coming soon →</span>
+        </article>
+    </div>
+    <div class="insights-subscribe">
+        <p>New articles dropping soon. Subscribe to get them in your inbox — no fluff, just real technical write-ups from production work.</p>
+        <form class="subscribe-form" id="insightsSubscribeForm" action="https://formspree.io/f/myknalje" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New Newsletter Subscriber — Nexus Interactive">
+            <input type="hidden" name="source" value="Insights Section">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            <div class="subscribe-row">
+                <input type="email" name="email" placeholder="your@email.com" required autocomplete="email" class="subscribe-input" id="insightsEmail">
+                <button type="submit" class="subscribe-btn">Subscribe</button>
+            </div>
+            <span class="subscribe-msg" id="insightsMsg"></span>
+        </form>
+    </div>
+</section>
+
+<!-- ===================== REFERRAL ===================== -->
+<section class="section referral">
+    <div class="referral-inner">
+        <div class="referral-text">
+            <div class="section-tag">PARTNERSHIPS &amp; REFERRALS</div>
+            <h2>Know someone who<br>needs a dev team?</h2>
+            <p>We offer a percentage-based referral fee for introductions that turn into projects — and priority support for clients who refer new business. Marketing agencies, consultants, and freelancers welcome.</p>
+            <div class="referral-perks">
+                <div class="perk"><span>💸</span> Referral commission on closed projects</div>
+                <div class="perk"><span>🤝</span> White-label dev for agencies without in-house teams</div>
+                <div class="perk"><span>⭐</span> Discounts on retainer for active referrers</div>
+            </div>
+            <a href="mailto:ali.a@nexusint.dev?subject=Partnership Inquiry" class="cta-button">Let's Partner Up →</a>
+        </div>
+        <div class="referral-card">
+            <div class="referral-quote">"The best referral program is just doing great work."</div>
+            <div class="referral-sub">We believe that. But we also believe in rewarding the people who trust us with their network.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== SUBSCRIBE STRIP ===================== -->
+<section class="subscribe-strip">
+    <div class="subscribe-strip-inner">
+        <div class="subscribe-strip-text">
+            <h3>Stay in the loop.</h3>
+            <p>New case studies, technical articles, and agency updates — straight to your inbox. No spam, unsubscribe anytime.</p>
+        </div>
+        <form class="subscribe-form subscribe-form-strip" id="stripSubscribeForm" action="https://formspree.io/f/myknalje" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New Newsletter Subscriber — Nexus Interactive">
+            <input type="hidden" name="source" value="Footer Strip">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            <div class="subscribe-row">
+                <input type="email" name="email" placeholder="your@email.com" required autocomplete="email" class="subscribe-input" id="stripEmail">
+                <button type="submit" class="subscribe-btn">Subscribe</button>
+            </div>
+            <span class="subscribe-msg" id="stripMsg"></span>
+        </form>
+    </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section id="contact" class="section cta-section">
+    <div class="cta-box">
+        <div class="cta-glow"></div>
+        <div class="section-tag">GET STARTED</div>
+        <h2>Ready to build<br><em>something real?</em></h2>
+        <p>Start with a free digital audit. We'll review your current setup, identify opportunities, and show you exactly what's possible — no cost, no commitment.</p>
+        <div class="cta-actions">
+            <a href="#" onclick="openAuditModal(event)" class="cta-button cta-large">Request a Free Audit</a>
+            <a href="tel:+16122088187" class="ghost-button">Or call +1 (612) 208-8187</a>
+        </div>
+        <p class="cta-note">Typical response time: under 24 hours.</p>
+    </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer id="about">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="logo footer-logo">Nexus<span>.</span></div>
+            <p>Modern web &amp; mobile development for organizations that make a difference. Minneapolis–St. Paul and beyond.</p>
+            <div class="footer-contact">
+                <a href="mailto:aliadem0205@gmail.com">ali.a@nexusint.dev</a>
+                <a href="tel:+16122088187">+1 (612) 208-8187</a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <div class="footer-col">
                 <h4>Services</h4>
-                <a href="#services">Web Design & Development</a>
                 <a href="#services">Mobile Apps</a>
+                <a href="#services">Web Development</a>
                 <a href="#services">E-commerce</a>
-                <a href="#services">UI/UX Design</a>
                 <a href="#services">Custom Dashboards</a>
+                <a href="#services">UI/UX Design</a>
             </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <a href="mailto:ali.a@nexusint.dev">ali.a@nexusint.dev</a>
-                <a href="tel:+1234567890">+1 (612) 208-8187</a>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="#who-we-serve">Who We Serve</a>
+                <a href="#work">Case Studies</a>
+                <a href="#process">Our Process</a>
+                <a href="#insights">Insights</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Specialties</h4>
+                <a href="#who-we-serve">Non-Profits</a>
+                <a href="#who-we-serve">Community Orgs</a>
+                <a href="#who-we-serve">Small Business</a>
+                <a href="#who-we-serve">Startups</a>
+                <a href="#contact">Partnerships</a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Nexus Interactive LLC. All rights reserved.</p>
-        </div>
-    </footer>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Nexus Interactive LLC. All rights reserved.</p>
+        <p class="footer-tagline">Built in Minneapolis. Deployed worldwide.</p>
+    </div>
+</footer>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
+<!-- ===================== AUDIT MODAL ===================== -->
+<div class="modal-overlay" id="auditModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+        <button class="modal-close" id="modalClose" aria-label="Close">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M1 1l16 16M17 1L1 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+
+        <!-- Default State -->
+        <div class="modal-body" id="modalBody">
+            <div class="modal-header">
+                <div class="section-tag">FREE DIGITAL AUDIT</div>
+                <h2 id="modalTitle">Let's see what's possible.</h2>
+                <p>Tell us a bit about your project. We'll review your current setup and come back with a clear opportunity map — no cost, no obligation.</p>
+            </div>
+
+            <form id="auditForm" action="https://formspree.io/f/mbdzeqdn" method="POST" novalidate>
+                <!-- Honeypot spam protection -->
+                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                <input type="hidden" name="_subject" value="New Free Audit Request — Nexus Interactive">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Your Name <span class="req">*</span></label>
+                        <input type="text" id="name" name="name" placeholder="Ali Hassan" required autocomplete="name">
+                        <span class="field-error" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="req">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="you@yourdomain.com" required autocomplete="email">
+                        <span class="field-error" id="emailError"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="org">Organization / Business</label>
+                        <input type="text" id="org" name="organization" placeholder="Tawfiq Islamic Center" autocomplete="organization">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone (optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (612) 000-0000" autocomplete="tel">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="projectType">What do you need? <span class="req">*</span></label>
+                    <div class="select-wrap">
+                        <select id="projectType" name="project_type" required>
+                            <option value="" disabled selected>Select the best fit...</option>
+                            <option value="Mobile App">Mobile App (iOS / Android)</option>
+                            <option value="Website / Web App">Website or Web App</option>
+                            <option value="E-commerce Store">E-commerce Store</option>
+                            <option value="Custom Dashboard">Custom Dashboard / Admin Panel</option>
+                            <option value="Non-Profit / Community Org">Non-Profit / Community Org Site</option>
+                            <option value="Performance Optimization">Performance Optimization</option>
+                            <option value="Maintenance & Support">Maintenance &amp; Support</option>
+                            <option value="Not sure yet">Not sure yet — I need guidance</option>
+                        </select>
+                        <svg class="select-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <span class="field-error" id="projectTypeError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Tell us more <span class="req">*</span></label>
+                    <textarea id="message" name="message" rows="4" placeholder="What's the current challenge? What would success look like? Any existing website or app URL helps." required></textarea>
+                    <span class="field-error" id="messageError"></span>
+                </div>
+
+                <div class="form-group form-budget">
+                    <label>Approximate Budget</label>
+                    <div class="budget-options">
+                        <label class="budget-option"><input type="radio" name="budget" value="Under $2k"> <span>Under $2k</span></label>
+                        <label class="budget-option"><input type="radio" name="budget" value="$2k–$5k"> <span>$2k–$5k</span></label>
+                        <label class="budget-option"><input type="radio" name="budget" value="$5k–$15k"> <span>$5k–$15k</span></label>
+                        <label class="budget-option"><input type="radio" name="budget" value="$15k+"> <span>$15k+</span></label>
+                    </div>
+                </div>
+
+                <button type="submit" class="form-submit" id="submitBtn">
+                    <span class="submit-text">Request My Free Audit</span>
+                    <span class="submit-spinner" hidden>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                            Sending...
+                        </span>
+                </button>
+
+                <p class="form-note">Typical response time: under 24 hours. We never share your information.</p>
+            </form>
+        </div>
+
+        <!-- Success State -->
+        <div class="modal-success" id="modalSuccess" hidden>
+            <div class="success-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="var(--accent)" stroke-width="2"/><path d="M9 16.5l4.5 4.5 9-9" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>You're on the list.</h3>
+            <p>We got your request and will be in touch within 24 hours. While you wait, feel free to reach out directly at <a href="mailto:ali.a@nexusint.dev">ali.a@nexusint.dev</a>.</p>
+            <button class="cta-button" id="successClose">Close</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
