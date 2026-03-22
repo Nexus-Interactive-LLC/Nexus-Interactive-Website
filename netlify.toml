@@ -4,10 +4,10 @@
 [[plugins]]
   package = "netlify-plugin-checklinks"
   [plugins.inputs]
-    # Tell the plugin to stop checking these specific URLs
-    exclude = [
-      "https://fonts.gstatic.com",
-      "https://fonts.googleapis.com"
+  # Use skipPatterns to ignore the Google Fonts SSL errors
+  skipPatterns = [
+    "fonts.gstatic.com",
+    "fonts.googleapis.com"
     ]
 
 [[plugins]]
